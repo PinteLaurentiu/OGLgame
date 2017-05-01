@@ -1,10 +1,3 @@
-/*
- * Window.cpp
- *
- *  Created on: May 1, 2017
- *      Author: lau
- */
-
 #include "Window.h"
 #include <iostream>
 

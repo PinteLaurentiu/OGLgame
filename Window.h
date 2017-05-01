@@ -1,12 +1,5 @@
-/*
- * Window.h
- *
- *  Created on: May 1, 2017
- *      Author: lau
- */
-
-#ifndef WINDOW_H_
-#define WINDOW_H_
+#ifndef WINDOW_H
+#define WINDOW_H
 
 #include "glhs.h"
 #include "Cube.h"
@@ -27,4 +20,4 @@ private:
 	float aspectRatio;
 };
 
-#endif /* WINDOW_H_ */
+#endif // WINDOW_H

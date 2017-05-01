@@ -3,7 +3,8 @@
 
 #include <vector>
 
-class Color {
+class Color
+{
 public:
     float getR() const;
     float getG() const;

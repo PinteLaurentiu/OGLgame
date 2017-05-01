@@ -1,10 +1,3 @@
-/*
- * Cube.cpp
- *
- *  Created on: May 1, 2017
- *      Author: lau
- */
-
 #include "Cube.h"
 #include "glhs.h"
 
@@ -19,36 +12,35 @@ void Cube::draw()
 	color.set();
 	glBegin(GL_QUADS);
 
-    glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); //BACK
+    glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); // BACK
 	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() - size);
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() - size);
 	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() - size);
 
-	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() + size); //FRONT
+	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() + size); // FRONT
 	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() + size);
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() + size);
 	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() + size);
 
-	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() - size); //RIGHT
+	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() - size); // RIGHT
 	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() + size);
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() + size);
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() - size);
 
-	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); //LEFT
+	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); // LEFT
 	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() + size);
 	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() + size);
 	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() - size);
 
-	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); //TOP
+	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() - size); // TOP
 	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() - size);
 	glVertex3f(pos.getX() + size, pos.getY() + size, pos.getZ() + size);
 	glVertex3f(pos.getX() - size, pos.getY() + size, pos.getZ() + size);
 
-	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() - size); //BOTTOM
+	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() - size); // BOTTOM
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() - size);
 	glVertex3f(pos.getX() + size, pos.getY() - size, pos.getZ() + size);
 	glVertex3f(pos.getX() - size, pos.getY() - size, pos.getZ() + size);
-
 
 	glEnd();
 }

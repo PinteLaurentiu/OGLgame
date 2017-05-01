@@ -1,17 +1,11 @@
-/*
- * Cube.h
- *
- *  Created on: May 1, 2017
- *      Author: lau
- */
-
-#ifndef CUBE_H_
-#define CUBE_H_
+#ifndef CUBE_H
+#define CUBE_H
 
 #include "Color.h"
 #include "Vector3.h"
 
-class Cube {
+class Cube
+{
 public:
 	Cube(float size, const Vector3& pos, const Color& color);
 	Cube();
@@ -23,4 +17,4 @@ private:
 	Color color;
 };
 
-#endif /* CUBE_H_ */
+#endif // CUBE_H

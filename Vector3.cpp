@@ -1,10 +1,3 @@
-/*
- * Vector3.cpp
- *
- *  Created on: May 1, 2017
- *      Author: lau
- */
-
 #include "Vector3.h"
 
 Vector3::Vector3() : x(0.0f),  y(0.0f),  z(0.0f) {}
