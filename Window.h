@@ -3,6 +3,7 @@
 
 #include "glhs.h"
 #include "Cube.h"
+#include "Texture.h"
 
 class Window {
 public:
@@ -17,6 +18,7 @@ private:
 	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	GLFWwindow* window;
 	Cube cube;
+	Texture tex;
 	float aspectRatio;
 };
 

@@ -57,7 +57,18 @@ void Window::draw()
 {
 	/*glScalef(1, aspectRatio, 1);*/
 	glClear(GL_COLOR_BUFFER_BIT);
-	cube.draw();
+	tex.set();
+	glBegin(GL_QUADS);
+	glTexCoord2f(1,0);
+	glVertex2f(0.5f, 0.5f);
+	glTexCoord2f(0,0);
+	glVertex2f(-0.5f, 0.5f);
+	glTexCoord2f(0,1);
+	glVertex2f(-0.5f, -0.5f);
+	glTexCoord2f(1,1);
+	glVertex2f(0.5f, -0.5f);
+	glEnd();
+	//cube.draw();
 }
 
 void Window::update()
@@ -76,8 +87,12 @@ void Window::initialize(int width, int height)
 	glFrustum(-aspectRatio, aspectRatio, -1, 1, 1.0, 1000);
 	glMatrixMode(GL_MODELVIEW);
 	glViewport(0, 0, width, height);
-	gluLookAt (1.0, 0.6, 2.0, 1.0, 0.6, 0.0, 0.0, 1, 0.0);
+	gluLookAt (0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 1, 0.0);
+	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	cube = Cube(1, Vector3(0, 0, 0), Color(1.0f, 0.0f, 0.0f, 1.0f));
+	tex = Texture("tux.png");
 }
 
 void Window::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
